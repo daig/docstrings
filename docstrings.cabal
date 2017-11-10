@@ -1,24 +1,29 @@
 name:                docstrings
 version:             0.1.0.0
--- synopsis:
--- description:
-homepage:            https://github.com/githubuser/docstrings#readme
-license:             BSD3
+synopsis:            Docstrings for access in the repl
+description:         Doctsrings for access in the repl
+homepage:            https://github.com/daig/docstrings#readme
+license:             MIT
 license-file:        LICENSE
-author:              Author name here
-maintainer:          example@example.com
-copyright:           2017 Author name here
-category:            Web
+author:              Dai
+maintainer:          dailectic@gmail.com
+copyright:           2017 Dai
+category:            Documentation
 build-type:          Simple
 extra-source-files:  README.md
 cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  exposed-modules:     Lib
+  exposed-modules:     Help, Help.Docstring
+  other-modules:       Help.Docstring.Internal
   build-depends:       base >= 4.7 && < 5
+                      ,containers
+                      ,template-haskell
+                      ,heredoc
+  ghc-options:         -Wall
   default-language:    Haskell2010
 
 source-repository head
   type:     git
-  location: https://github.com/githubuser/docstrings
+  location: https://github.com/daig/docstrings
