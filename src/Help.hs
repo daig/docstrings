@@ -21,7 +21,7 @@ import Data.Map as M
 -- or a type identifier `''MyIdentifier`.
 --
 -- `help` will find documentation from any use of `docstring` in previously imported modules.
--- Documentation for a module `MyModule` is conventionally found in an associated `MyModule.Docs`|]
+-- Documentation for a module `MyModule` is conventionally found in an associated `MyModule.Docs`
 help :: Name -> IO ()
 help n = do
   m <- readMVar docstrings
